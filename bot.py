@@ -38,7 +38,7 @@ async def handle_url(update: Update, context: ContextTypes.DEFAULT_TYPE):
         session_path = os.path.join(DOWNLOAD_DIR, str(chat_id))
         os.makedirs(session_path, exist_ok=True)
 
-        cookies_path = "cookies.txt" if os.path.exists("cookies.txt") else None
+        cookies_path = "www.youtube.com_cookies.txt" if os.path.exists("www.youtube.com_cookies.txt") else None
 
         ydl_opts = {
             'outtmpl': os.path.join(session_path, '%(playlist_index)s - %(title)s.%(ext)s'),
